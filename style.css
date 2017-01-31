@@ -1,0 +1,260 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+
+a{
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+.skip-to-content{
+    position: absolute;
+    left: -2000px;
+    top: -2000px;
+}
+
+.jsHamburger {
+    display: none;
+    background: #4d4d4d;
+    color: #fff;
+    padding:20px;
+    font-size: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+.main-nav{
+    font-size: 18px;
+    position: relative;
+    color:#fff;
+    font-family: arial;
+}
+
+.main-nav ul{
+    border-bottom: 2px solid #4d4d4d;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-nav ul li{
+    padding:20px;
+    cursor: pointer;
+}
+
+.main-nav ul li:hover{
+    color:#c1c1c1;
+}
+
+
+.main-nav ul .submenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background: #4d4d4d;
+    left: 0;
+    right: 0;
+}
+
+.main-nav ul .submenu a{
+    color: #fff;
+}
+
+.secondary-nav-item{
+    border: none;
+    text-align: left;
+    display: inline-block;
+    float: left;
+}
+
+.secondary-nav-item ul {
+    display: none;
+}
+
+.activeMega ul{
+    display:block;
+    top:100%;
+    position:absolute;
+    background:#4d4d4d;
+    left: 0;
+    right:0;
+    border-top: 2px solid #fff;
+}
+
+.tertiary-nav-item{
+    border: none;
+    text-align: left;
+    font-weight: normal;
+    display: inline-block;
+    float: left;
+}
+
+.activePrimary:after{
+    position:absolute;
+    bottom:-25px;
+    font-family: fontawesome;
+    content:'\f0d7';
+    color:#fff;
+    font-size: 50px;
+}
+            
+.hideActiveArrow:after{
+    color:transparent;
+}
+
+.activeMega{
+    font-weight:bold;
+}
+
+.activeMega:before {
+    position: absolute;
+    bottom: -27px;
+    font-family: fontawesome;
+    content: '\f0d7';
+    color: #fff;
+    font-size: 40px;
+    z-index: 2;
+}
+
+
+
+
+@media screen and (max-width: 1024px){
+    .jsHamburger {
+        display: block;
+    }
+
+    .main-nav{
+        display:none;
+        position:absolute;
+        background: #4d4d4d;
+        color:#fff;
+        margin-top:0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        text-align:left;
+    }
+
+    .main-nav ul{
+        display: block;
+    }
+
+    .primary-nav-item{
+        float: left;
+        clear: left;
+        border-right:none;
+        padding-left: 20px;
+        padding-right: 20px;
+        width:100%;
+        border-bottom:1px solid #fff;
+        padding-top:10px;
+        padding-bottom:10px;
+        font-size:16px;
+    }
+
+    .primary-nav-item a{
+        color:#fff;
+        line-height:50px;
+        width:100%;
+        position:relative;
+        display:block;
+    }
+
+    /*.primary-nav-item:last-child{
+        padding-left: 20px;
+        padding-right:20px;
+        border-bottom:none;
+    }*/
+
+     .hasSubMenu a:after{
+        content:'\f0d7';
+        font-family:fontawesome;
+        position:absolute;
+        right:0;
+    }
+
+    .secondary-nav-item a:after{
+        content:'';
+    }
+
+    .hasMega a:after{
+        content:'\f0d7';    
+    }
+
+    .active-dropdown-icon:after{
+        content:'\f0d8'!important;
+        font-family: fontawesome;
+    }
+
+    .main-nav ul .submenu{
+        position: relative;
+        top:auto;
+        padding:0;
+        float:left;
+        width:100%;
+    }
+
+    ul.submenu .secondary-nav-item{
+        clear: both;
+        padding:0;
+        border:none;
+        width:100%;
+        text-align:left;
+        padding-left:20px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    .tertiary-nav-item{
+        width:100%;
+    }
+
+    .tertiary-nav-item a:after{
+        display: none;
+    }
+
+    .activeMega .megaMenu{
+        position:relative;
+        border:none;
+    }
+
+    .activeMega .megaMenu li{
+        width:100%;
+    }
+
+
+    .hasMega ul{
+        display: none;
+    }
+
+    .activeMega ul{
+        display: none;
+        position:relative;
+        border: none;
+    }
+
+    .activePrimary:after{
+        display: none;
+    }
+
+    .megaMenu a:after{
+        content:'';
+    }
+
+    .activeMega{
+        font-weight: normal;
+    }
+
+    .activeMega:before{
+        display:none;
+    }
+
+
+}
