@@ -1,7 +1,7 @@
 *, *:before, *:after {
-  box-sizing: border-box;
-  margin:0;
-  padding:0;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
 ol, ul {
@@ -103,7 +103,7 @@ a{
     color:#fff;
     font-size: 50px;
 }
-            
+
 .hideActiveArrow:after{
     color:transparent;
 }
@@ -173,7 +173,7 @@ a{
         border-bottom:none;
     }*/
 
-     .hasSubMenu a:after{
+    .hasSubMenu a:after{
         content:'\f0d7';
         font-family:fontawesome;
         position:absolute;
